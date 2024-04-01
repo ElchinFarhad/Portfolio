@@ -1,6 +1,7 @@
 /* START OF HEADER STYLES */
 header {
   padding: 16px 32px;
+  margin-bottom: 50px;
 }
 
 header .wrapper {
@@ -18,10 +19,6 @@ header h1 span {
   gap: 50px; 
   margin-left: auto; 
 
-}
-
-header h1 a {
-  color: #333;
 }
 
 header nav {

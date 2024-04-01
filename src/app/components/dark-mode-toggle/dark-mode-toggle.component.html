@@ -1,3 +1,10 @@
-<button mat-icon-button (click)="toggleTheme()">
-  <mat-icon>{{ (darkMode$ | async) ? "wb_sunny" : "nights_stay" }}</mat-icon>
+<button
+  mat-icon-button
+  (click)="toggleTheme()"
+  class="theme-toggle-button"
+  [class.dark-mode]="darkMode$ | async"
+>
+  <mat-icon [style.color]="(darkMode$ | async) ? 'white' : 'black'">{{
+    (darkMode$ | async) ? "wb_sunny" : "nights_stay"
+  }}</mat-icon>
 </button>

@@ -10,9 +10,13 @@ import { Observable } from 'rxjs';
 export class DarkModeToggleComponent {
 
   darkMode$: Observable<boolean>;
+  isDarkMode: boolean = false;
 
   constructor(private darkModeService: DarkModeService) {
     this.darkMode$ = this.darkModeService.darkMode$;
+    this.darkMode$.subscribe((value) => {
+      this.isDarkMode = value;
+    });
   }
 
   toggleTheme(): void {

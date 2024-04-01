@@ -1,0 +1,20 @@
+.theme-toggle-button {
+    background-color: transparent; /* Set button background color */
+    border: none; /* Remove button border */
+    outline: none; /* Remove button outline */
+    cursor: pointer; /* Set cursor to pointer */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+  }
+  
+  .theme-toggle-button .mat-icon {
+    font-size: 24px; /* Set icon size */
+    color: #333; /* Set icon color */
+  }
+
+  .dark-mode .theme-toggle-button .mat-icon {
+    color: white; /* Set icon color for dark mode */
+  }
