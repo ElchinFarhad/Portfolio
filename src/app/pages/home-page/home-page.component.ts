@@ -18,6 +18,8 @@ export class HomePageComponent implements OnInit {
     description: 'Description for third project.'
   }];
 
+  itemImageUrl = '../.assets/images/background.jpeg'
+
   constructor() { }
 
   ngOnInit(): void {

@@ -12,6 +12,8 @@ import { DarkModeToggleComponent } from './components/dark-mode-toggle/dark-mode
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ArticlesPageComponent } from './pages/articles-page/articles-page.component';
+import { MatCardModule } from '@angular/material/card';
 
 const pages = [{
   path: '',
@@ -23,6 +25,10 @@ const pages = [{
 {
   path: 'about',
   component: AboutPageComponent
+},
+{
+  path: 'article',
+  component: ArticlesPageComponent
 }
 ];
 
@@ -41,7 +47,8 @@ const pages = [{
     AppRoutingModule,
     RouterModule.forRoot(pages),
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

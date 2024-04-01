@@ -1,6 +1,9 @@
 /* Add application styles & imports to this file! */
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import "~bootstrap/dist/css/bootstrap-reboot.css";
+@import "~bootstrap/dist/css/bootstrap-grid.css";
+
 
 *,
 *::before,
@@ -10,7 +13,7 @@
 
 body {
   margin: 0;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Cinzel", sans-serif; /* Using the vintage font "Cinzel" */
   line-height: 1.6;
   color: #333;
 }
@@ -44,4 +47,4 @@ body.light-mode {
   color: #2d3436;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
