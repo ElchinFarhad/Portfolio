@@ -1,0 +1,26 @@
+/* START OF HOME PAGE STYLES */
+img {
+    display: block;
+    width: calc(100% + 60px);
+    height: 240px;
+    margin: 0 -30px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  h2 {
+    margin-top: 50px;
+  }
+  
+  ul li {
+    margin: 16px 0;
+  }
+  /* END OF HOME PAGE STYLES */
+  
+  /* START OF PROJECT STYLES */
+  p {
+    margin: 0;
+  }
+  /* END OF PROJECT STYLES */
+  
