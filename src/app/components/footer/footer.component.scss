@@ -1,9 +1,14 @@
 /* START OF FOOTER STYLES */
 footer {
   padding: 16px 32px;
-  padding-bottom: 64px;
+  padding-bottom: 20px;
   margin-top: 80px;
   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // background-color: #f9f9f9; /* Add a background color for better visibility */
 }
 
 footer small span {

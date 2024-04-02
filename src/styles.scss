@@ -11,9 +11,10 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
-  font-family: "Cinzel", sans-serif; /* Using the vintage font "Cinzel" */
+  // font-family: "Cinzel", sans-serif !important; /* Ensure higher specificity */
   line-height: 1.6;
   color: #333;
 }
