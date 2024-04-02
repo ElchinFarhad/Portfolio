@@ -7,7 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DarkModeToggleComponent } from './components/dark-mode-toggle/dark-mode-toggle.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,7 +16,7 @@ import { ArticlesPageComponent } from './pages/articles-page/articles-page.compo
 import { MatCardModule } from '@angular/material/card';
 import { ProjectComponent } from './components/project/project.component';
 
-const pages = [{
+const pages: Routes = [{
   path: '',
   component: HomePageComponent
 }, {
