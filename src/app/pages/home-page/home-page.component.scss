@@ -7,6 +7,8 @@ img {
     margin-bottom: 50px;
     object-fit: cover;
     object-position: center center;
+    border: 5px solid transparent; /* Set border to transparent */
+    border-radius: 1px; /* Add border radius for smoother edges */
   }
   
   h2 {
@@ -22,5 +24,7 @@ img {
   p {
     margin: 0;
   }
+
+  
   /* END OF PROJECT STYLES */
   

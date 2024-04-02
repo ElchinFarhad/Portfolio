@@ -3,13 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { PortfolioService } from 'src/app/portfolio.service';
 
 @Component({
-  selector: 'app-projects-page',
-  templateUrl: './projects-page.component.html',
-  styleUrls: ['./projects-page.component.scss']
+  selector: 'app-project',
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.scss']
 })
-export class ProjectsPageComponent implements OnInit {
+export class ProjectComponent implements OnInit {
 
-  projects: any;
+  project: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,12 +18,10 @@ export class ProjectsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.projectService.getAllProjects().subscribe(project => {
-        this.projects = project;
+      const projectId = +params['id'];
+      this.projectService.getProjectById(projectId).subscribe(project => {
+        this.project = project;
       });
     });
   }
-
-
-
 }

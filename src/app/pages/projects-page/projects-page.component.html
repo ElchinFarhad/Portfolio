@@ -1,3 +1,13 @@
-<h2>Welcome to my projects page!</h2>
+<h2>My Projects</h2>
 
-<p>Here are my projects...</p>
+<ul>
+  <li *ngFor="let project of projects">
+    <a
+      [routerLink]="['/projects', project.id]"
+      [state]="{ project: project }"
+      >{{ project.name }}</a
+    >
+    <p>{{ project.description }}</p>
+  </li>
+</ul>
+<router-outlet></router-outlet>

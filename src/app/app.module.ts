@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ArticlesPageComponent } from './pages/articles-page/articles-page.component';
 import { MatCardModule } from '@angular/material/card';
+import { ProjectComponent } from './components/project/project.component';
 
 const pages = [{
   path: '',
@@ -23,13 +24,18 @@ const pages = [{
   component: ProjectsPageComponent
 },
 {
+  path: 'projects/:id',
+  component: ProjectComponent
+},
+{
   path: 'about',
   component: AboutPageComponent
 },
 {
   path: 'article',
   component: ArticlesPageComponent
-}
+},
+{ path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -40,7 +46,8 @@ const pages = [{
     ProjectsPageComponent,
     HomePageComponent,
     DarkModeToggleComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
