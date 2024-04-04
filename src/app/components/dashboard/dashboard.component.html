@@ -1,0 +1,13 @@
+<div>
+  <h2>Welcome to the Dashboard</h2>
+  <div *ngIf="isAdmin">
+    <input type="text" [(ngModel)]="textInput" placeholder="Enter text..." />
+    <button (click)="addText()">Add Text</button>
+  </div>
+  <div *ngIf="!isAdmin">
+    <p>Sorry, you don't have permission to add text.</p>
+  </div>
+  <div *ngIf="dashboardText">
+    <p>{{ dashboardText }}</p>
+  </div>
+</div>

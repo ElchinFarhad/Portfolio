@@ -15,6 +15,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ArticlesPageComponent } from './pages/articles-page/articles-page.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProjectComponent } from './components/project/project.component';
+import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const pages: Routes = [{
   path: '',
@@ -35,6 +37,10 @@ const pages: Routes = [{
   path: 'article',
   component: ArticlesPageComponent
 },
+{
+  path: 'dashboard',
+  component: DashboardComponent
+},
 { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
@@ -47,7 +53,8 @@ const pages: Routes = [{
     HomePageComponent,
     DarkModeToggleComponent,
     AboutPageComponent,
-    ProjectComponent
+    ProjectComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +62,8 @@ const pages: Routes = [{
     RouterModule.forRoot(pages),
     BrowserAnimationsModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
