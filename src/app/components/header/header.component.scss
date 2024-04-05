@@ -10,6 +10,11 @@ header .wrapper {
   flex-wrap: wrap;
 }
 
+.page-header{
+  font: inherit;
+  font-size: 35px;
+}
+
 header h1 span {
   margin-right: 10px;
 }
