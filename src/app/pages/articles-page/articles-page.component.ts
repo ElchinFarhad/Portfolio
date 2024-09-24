@@ -23,7 +23,7 @@ export class ArticlesPageComponent implements OnInit {
     {
       title: 'Art',
       description: 'Coming soon',
-      image: '../../../assets/3.jpeg',
+      image: '../../../assets/david.jpg',
       link: '/article/art'
     },
     {
@@ -31,7 +31,8 @@ export class ArticlesPageComponent implements OnInit {
       description: 'Coming soon',
       image: '../../../assets/background.jpeg',
       link: '/article/minimalism'
-    }
+    },
+
   ];
 
   constructor() { }
