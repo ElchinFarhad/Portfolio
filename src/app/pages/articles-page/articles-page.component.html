@@ -1,49 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm" *ngFor="let article of articles">
       <div class="card" style="width: 18rem">
         <img
           class="card-img-top"
-          src="../../../assets/stoic.jpeg"
-          alt="Card image cap"
+          [src]="article.image"
+          [alt]="article.title"
           style="width: 200px; height: 300px"
         />
         <div class="card-body">
-          <h5 class="card-title">Stoicism</h5>
-          <p class="card-text">Coming soon</p>
-          <a href="#" class="btn btn-primary">Read</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm">
-      <div class="card" style="width: 18rem">
-        <img
-          class="card-img-top"
-          src="../../../assets/3.jpeg"
-          alt="Card image cap"
-          style="width: 200px; height: 300px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Art</h5>
-          <p class="card-text">-</p>
-          <a href="#" class="btn btn-primary">Read</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm">
-      <div class="card" style="width: 18rem">
-        <img
-          class="card-img-top"
-          src="../../../assets/background.jpeg"
-          alt="Card image cap"
-          style="width: 200px; height: 300px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Minimalism</h5>
-          <p class="card-text">.</p>
-          <a href="#" class="btn btn-primary">Read</a>
+          <h5 class="card-title">{{ article.title }}</h5>
+          <p class="card-text">{{ article.description }}</p>
+          <a [routerLink]="article.link" class="btn btn-primary">Read</a>
         </div>
       </div>
     </div>

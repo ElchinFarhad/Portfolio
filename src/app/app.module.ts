@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ProjectComponent } from './components/project/project.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ArticleComponent } from './pages/article/article.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const pages: Routes = [{
   path: '',
@@ -38,6 +40,10 @@ const pages: Routes = [{
   component: ArticlesPageComponent
 },
 {
+  path: 'article/:title',
+  component: ArticleComponent
+},
+{
   path: 'dashboard',
   component: DashboardComponent
 },
@@ -52,6 +58,7 @@ const pages: Routes = [{
     ProjectsPageComponent,
     HomePageComponent,
     DarkModeToggleComponent,
+    ArticlesPageComponent,
     AboutPageComponent,
     ProjectComponent,
     DashboardComponent
@@ -59,11 +66,12 @@ const pages: Routes = [{
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(pages),
+    RouterModule.forRoot(pages), // Keep this
     BrowserAnimationsModule,
     MatIconModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
