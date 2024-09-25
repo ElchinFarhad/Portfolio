@@ -93,9 +93,12 @@
     </p>
 
     <h2>CONST</h2>
-    <pre><code>const numbers = [1, 2, 3]; 
-numbers = [4, 5, 6]; // Causes an error
-numbers.add(7);      // Causes an error</code></pre>
+    <code>const numbers = [1, 2, 3];</code>
+    <br>
+    <code>numbers = [4, 5, 6];</code> // Causes an error
+    <br>
+    <code>numbers.add(7);</code> // Causes an error
+    <br>
     <p>
       With const, you cannot reassign numbers or modify its contents. The entire
       object is fully immutable, meaning both the reference and the data are
@@ -174,43 +177,49 @@ numbers.add(7);      // Causes an error</code></pre>
       address or the internal value.
     </p>
 
-    <h2>When to Use var, final, and const</h2>
+    <h1>When to Use var, final, and const</h1>
     <p>Let's analyze the most common use cases and best practices for each:</p>
 
-    <h3>var</h3>
+    <h2>VAR</h2>
     <p>
       Use var when you know that the value of the variable can change during
       runtime, or when the value is unknown initially. It's ideal for dynamic
       data.
     </p>
-    <pre><code>var count = 0;
-count = 10; // Reassigning the value is allowed</code></pre>
+    <code>var count = 0;</code>
+    <br>
+    <code>count = 10;</code> // Reassigning the value is allowed
     <p>
       Note: Try to minimize the use of var because it can make your code harder
       to understand and maintain, and may lead to type mismatches.
     </p>
 
-    <h3>final</h3>
+    <h2>FINAL</h2>
     <p>
       Use final when you want to assign a variable only once but still want to
       modify the internal content of mutable objects like lists or maps.
     </p>
-    <pre><code>final name = 'John'; // Assigned once, cannot be changed
-final numbers = [1, 2, 3];
-numbers.add(4); // Allowed, as the list itself is not being reassigned</code></pre>
+    <code>final name = 'John';</code> // Assigned once, cannot be changed
+    <br>
+    <code>final numbers = [1, 2, 3];</code>
+    <br>
+    <code>numbers.add(4);</code> // Allowed, as the list itself is not being reassigned
+    <br>
+
     <p>
       Note: final is often used for configuration values that are assigned once
       and do not need to change.
     </p>
 
-    <h3>const</h3>
+    <h2>CONST</h2>
     <p>
       Use const when you want to declare a value that you know will be constant
       and never change, even at compile time. It helps improve performance, as
       the value is allocated once and can be reused.
     </p>
-    <pre><code>const pi = 3.14; // A compile-time constant
-const list = [1, 2, 3]; // Immutable list</code></pre>
+    <code>const pi = 3.14;</code> // A compile-time constant
+    <br>
+    <code>const list = [1, 2, 3];</code> // Immutable list
     <p>Note: const is the most efficient but the least flexible option.</p>
 
     <h2>Summary</h2>
