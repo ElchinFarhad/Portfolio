@@ -1,28 +1,45 @@
-/* Add application styles & imports to this file! */
-
-/* Import Google Fonts */
+// Import Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Kode+Mono:wght@400..700&family=Sono:wght@200..800&family=Wellfleet&display=swap');
 
-/* Import Bootstrap */
+// Import Bootstrap
 @import "~bootstrap/dist/css/bootstrap-reboot.css";
 @import "~bootstrap/dist/css/bootstrap-grid.css";
 
+// Reset and base styles
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: "Kode Mono", monospace  !important; /* Add !important */
+  font-family: "Kode Mono", monospace !important;
   font-weight: 800;
   font-style: normal;
   line-height: 1.8;
   color: #333;
 }
 
+// Page layout
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+// Typography and links
 a,
 input,
 button {
@@ -35,6 +52,7 @@ a {
   text-decoration: none;
 }
 
+// Layout utilities
 .wrapper {
   width: 100%;
   max-width: 1200px;
@@ -42,35 +60,35 @@ a {
   margin: 0 auto;
 }
 
+// Theme styles
 body.dark-mode {
   background-color: #2d3436;
   color: #dfe6e9;
+
+  .header-text {
+    background-color: #2d3436;
+    color: #dfe6e9;
+  }
 }
 
 body.light-mode {
   background-color: #dfe6e9;
   color: #2d3436;
+
+  .header-text {
+    background-color: #dfe6e9;
+    color: #2d3436;
+  }
 }
 
-body.dark-mode .header-text{
-  background-color: #2d3436;
-  color: #dfe6e9;
-}
-
-body.light-mode .header-text{
-  background-color: #dfe6e9;
-  color: #2d3436;
-}
-
-
-.wrapper.dark-mode{
+.wrapper.dark-mode {
   color: #bb2c82;
-
 }
 
+// Responsive adjustments
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
 
-
-html, body { 
-  height: 100%;
-  font-family: "Kode Mono", monospace  !important; /* Add !important */
- }

@@ -21,17 +21,18 @@ export class ArticlesPageComponent implements OnInit {
       link: '/article/stoicism'
     },
     {
-      title: 'Art',
-      description: 'Coming soon',
-      image: '../../../assets/david.jpg',
-      link: '/article/art'
+      title: 'Variables',
+      description: 'Understanding variable declarations.',
+      image: '../../../assets/var.jpg',
+      link: '/article/variables'
     },
     {
       title: 'Minimalism',
       description: 'Coming soon',
-      image: '../../../assets/background.jpeg',
+      image: '../../../assets/minimalism.jpeg',
       link: '/article/minimalism'
-    },
+    }
+
 
   ];
 

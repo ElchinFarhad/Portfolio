@@ -1,4 +1,3 @@
-// article.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -20,11 +19,11 @@ export class ArticleComponent implements OnInit {
   }
 
   loadArticleContent(title: string) {
-    const filePath = `assets/articles/${title.toLowerCase()}.json`;
-    this.http.get<{ title: string; content: string }>(filePath).subscribe({
+    // Change filePath to load HTML files
+    const filePath = `assets/articles/${title.toLowerCase()}.html`;
+    this.http.get(filePath, { responseType: 'text' }).subscribe({
       next: (data) => {
-        this.articleTitle = data.title;
-        this.articleContent = data.content;
+        this.articleContent = data; // Directly assign HTML content
       },
       error: (err) => {
         console.error('Error loading article:', err);
