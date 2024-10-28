@@ -1,4 +1,3 @@
-/* START OF HEADER STYLES */
 header {
   padding: 16px 32px;
   margin-bottom: 50px;
@@ -10,9 +9,9 @@ header .wrapper {
   flex-wrap: wrap;
 }
 
-.page-header{
+.page-header {
   font: inherit;
-  font-size: 35px;
+  font-size: 38px;
 }
 
 header h1 span {
@@ -23,7 +22,6 @@ header h1 span {
   display: flex;
   gap: 50px; 
   margin-left: auto; 
-
 }
 
 header nav {
@@ -34,5 +32,11 @@ header nav {
 
 header nav > * {
   margin-left: 24px;
+}
+
+header nav a.active {
+  transform: rotate(-15deg);
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 /* END OF HEADER STYLES */

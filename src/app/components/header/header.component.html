@@ -8,16 +8,21 @@
 
     <div class="links">
       <nav>
-        <a routerLink="/">Home</a>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
       </nav>
       <nav>
-        <a routerLink="/projects/">Projects</a>
+        <a routerLink="/projects/" routerLinkActive="active">Projects</a>
       </nav>
       <nav>
-        <a routerLink="/about/">About</a>
+        <a routerLink="/about/" routerLinkActive="active">About</a>
       </nav>
       <nav>
-        <a routerLink="/article/">Article</a>
+        <a routerLink="/article/" routerLinkActive="active">Article</a>
       </nav>
     </div>
   </div>
