@@ -16,7 +16,14 @@ export class PortfolioService {
     name: 'Online exam registration | Full Stack',
     description: 'Web application for students to register for available exams on the system and for teachers to manage and grade students. The front end is developed using ReactJS and the back end with Nodejs and MySql',
     link: "https://github.com/ElchinFarhad/Exam-Reservation-Portal"
-  }];
+  },
+  {
+    id: 3,
+    name: 'Awesome Pizza | Microservices',
+    description: 'These are Spring Boot applications for managing pizza orders and processing order messages using Kafka for queue management.',
+    link: "https://github.com/ElchinFarhad/AwesomePizza"
+  },
+  ];
 
   constructor() { }
 
